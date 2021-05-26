@@ -6,3 +6,5 @@ htmlItem str = "<li>" ++ str ++ "</li>"
 
 itemize :: [String] -> [String]
 itemize str = map htmlItem str
+
+--onlyVowels :: String -> String

@@ -37,8 +37,11 @@ isSpace c = c == ' '
 countSpaces :: String -> Int
 countSpaces str2 = length(filter isSpace str2)
 
+area :: Float -> Float
+area r = pi*(r^2)
+
 calcAreas :: [Float] -> [Float]
-calcAreas raios = raios^2 * 3.1416
+calcAreas raios = map area raios
 
 isChar :: Char -> Char -> Bool
 isChar char1 char2 = char1 == char2

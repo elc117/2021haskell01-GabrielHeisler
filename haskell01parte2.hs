@@ -40,5 +40,8 @@ countSpaces str2 = length(filter isSpace str2)
 calcAreas :: [Float] -> [Float]
 calcAreas raios = raios^2 * 3.1416
 
---charFound :: Char -> String -> Bool
---charFound c s = map s c
+isChar :: Char -> Char -> Bool
+isChar char1 char2 = char1 == char2
+
+charFound :: Char -> String -> Bool
+charFound char string = length(filter (isChar char) string) > 0

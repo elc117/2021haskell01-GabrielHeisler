@@ -34,11 +34,11 @@ onlyBetween60and80 lst = filter between60and80 lst
 
 isSpace :: Char -> Bool
 isSpace c = c == ' '
-countSpaces :: String - > Int
+countSpaces :: String -> Int
 countSpaces str2 = length(filter isSpace str2)
 
 calcAreas :: [Float] -> [Float]
 calcAreas raios = raios^2 * 3.1416
 
-charFound :: Char -> String -> Bool
-charFound c s = map s c
+--charFound :: Char -> String -> Bool
+--charFound c s = map s c

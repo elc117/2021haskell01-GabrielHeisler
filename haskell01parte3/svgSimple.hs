@@ -12,15 +12,68 @@ svgCircle :: Int -> Int -> Int -> String -> String
 svgCircle x y r style = 
   printf "<circle cx='%d' cy='%d' r='%d' fill='%s' />\n" x y r style
 
--- Gera SVG com 2 círculos, um verde e um vermelho, com 0.4 de opacidade.
--- A opacidade pode não ser suportada em alguns visualizadores de SVG.
 svgAll :: String
 svgAll = 
   svgBegin 800 800 ++ 
-  (svgCircle 60 60 50 "rgb(10, 145, 32, 0.4)") ++ 
-  (svgCircle 90 90 50 "rgb(105, 14, 30, 0.4)") ++
-  (svgCircle 100 40 20 "rgb(80, 22, 70, 1)") ++ 
-  (svgCircle 400 300 200 "rgb(255, 0, 0, 0.1)") ++ 
+
+  --face
+  (svgCircle 400 400 200 "rgb(255, 255, 0, 1)") ++ 
+
+  --hat body
+  (svgCircle 400 150 100 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 300 150 100 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 500 150 100 "rgb(105, 14, 30, 1)") ++
+  
+  --hat middle
+  (svgCircle 600 250 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 550 250 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 500 250 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 450 250 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 400 250 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 350 250 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 300 250 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 250 250 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 200 250 50 "rgb(105, 14, 30, 1)") ++
+
+  --hat sides
+  (svgCircle 215 200 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 230 150 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 260 100 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 585 200 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 570 150 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 540 100 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 615 300 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 185 300 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 177 350 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 623 350 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 177 400 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 623 400 50 "rgb(105, 14, 30, 1)") ++
+
+  --hat top
+  (svgCircle 350 100 50 "rgb(105, 14, 30, 1)") ++
+  (svgCircle 450 100 50 "rgb(105, 14, 30, 1)") ++
+
+  --eyes
+  (svgCircle 335 350 22 "rgb(0, 0, 0, 1)") ++
+  (svgCircle 465 350 22 "rgb(0, 0, 0, 1)") ++
+  (svgCircle 335 350 20 "rgb(255, 255, 255, 1)") ++
+  (svgCircle 465 350 20 "rgb(255, 255, 255, 1)") ++
+  (svgCircle 335 350 20 "rgb(255, 0, 0, 1)") ++
+  (svgCircle 465 350 20 "rgb(255, 0, 0, 1)") ++
+  (svgCircle 335 350 17 "rgb(255, 255, 255, 1)") ++
+  (svgCircle 465 350 17 "rgb(255, 255, 255, 1)") ++
+  (svgCircle 335 350 14 "rgb(255, 0, 0, 1)") ++
+  (svgCircle 465 350 14 "rgb(255, 0, 0, 1)") ++
+  (svgCircle 335 350 11 "rgb(255, 255, 255, 1)") ++
+  (svgCircle 465 350 11 "rgb(255, 255, 255, 1)") ++
+  (svgCircle 335 350 08 "rgb(255, 0, 0, 1)") ++
+  (svgCircle 465 350 08 "rgb(255, 0, 0, 1)") ++
+  (svgCircle 335 350 05 "rgb(255, 255, 255, 1)") ++
+  (svgCircle 465 350 05 "rgb(255, 255, 255, 1)") ++
+  (svgCircle 335 350 02 "rgb(0, 0, 0, 1)") ++
+  (svgCircle 465 350 02 "rgb(0, 0, 0, 1)") ++
+
+
   svgEnd
 
 main :: IO ()
